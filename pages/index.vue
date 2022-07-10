@@ -5,6 +5,7 @@
     <p>
       <button @click="increment">increment</button>
     </p>
+    <ChildComponent1 />
   </div>
 </template>
 
