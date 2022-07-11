@@ -19,6 +19,6 @@ export default {
   },
 };
 
-const test = await fetch(`http://localhost:3000/data.json`);
-console.log(test);
+// const test = await fetch(`http://localhost:3000/data.json`);
+// console.log(test);
 </script>

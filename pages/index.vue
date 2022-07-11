@@ -9,6 +9,8 @@
     <TimerComponent @child-clicked="startGame" />
     <br />
     <ChildComponent1 v-model="inputValue" @CheckResult="CheckResult" />
+    <br />
+    <Result v-model="SuccessCount" />
   </div>
 </template>
 
@@ -52,6 +54,9 @@ export default {
       randMoji,
       MojiMoji,
       startGame,
+      CheckResult,
+      inputValue,
+      SuccessCount,
     };
   },
 };
