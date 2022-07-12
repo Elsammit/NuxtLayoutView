@@ -1,6 +1,8 @@
 <template>
-  {{ timer }}
-  <button @click="clickHandler">start</button>
+  <div>
+    <button class="startGameBtn" @click="clickHandler">start</button>
+    <div class="startTimerArea">残り：{{ timer }}秒</div>
+  </div>
 </template>
 
 <script>
@@ -21,3 +23,20 @@ export default {
   },
 };
 </script>
+
+<style>
+.startGameBtn {
+  float: left;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+.startTimerArea {
+  margin-left: 30px;
+  font-size: 32px;
+}
+</style>

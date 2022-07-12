@@ -1,5 +1,7 @@
 <template>
-  <input v-model="inputValue" />
+  <div>
+    <input type="text" class="inputArea" v-model="inputValue" />
+  </div>
 </template>
 
 <script>
@@ -18,7 +20,10 @@ export default {
     return { inputValue };
   },
 };
-
-// const test = await fetch(`http://localhost:3000/data.json`);
-// console.log(test);
 </script>
+
+<style>
+.inputArea {
+  font-size: 32px;
+}
+</style>

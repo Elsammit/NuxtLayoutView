@@ -1,13 +1,13 @@
 <template>
   <div>
     <h1>タイピングゲーム</h1>
+    <TimerComponent @child-clicked="startGame" />
     <div class="questionString">
       <p>
         {{ MojiMoji }}
       </p>
       <ChildComponent1 v-model="inputValue" @CheckResult="CheckResult" />
     </div>
-    <TimerComponent @child-clicked="startGame" />
     <br />
     <br />
     <Result />
