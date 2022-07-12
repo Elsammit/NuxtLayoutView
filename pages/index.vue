@@ -1,16 +1,12 @@
 <template>
   <div>
     <h1>index page</h1>
-    <p>カウント:{{ counter.count }}</p>
-    <p>
-      <button @click="increment">increment</button>
-    </p>
     {{ MojiMoji }}
     <TimerComponent @child-clicked="startGame" />
     <br />
     <ChildComponent1 v-model="inputValue" @CheckResult="CheckResult" />
     <br />
-    <Result v-model="SuccessCount" />
+    <Result />
   </div>
 </template>
 
@@ -19,13 +15,15 @@ export default {
   setup() {
     let MojiMoji = ref('何がでるかな?');
     const inputValue = ref();
-    const SuccessCount = ref(0);
+
+    const counter = userCounter();
+
     const CheckResult = () => {
       console.log('test');
       if (inputValue.value === MojiMoji.value) {
         MojiMoji.value = randMoji();
         inputValue.value = '';
-        SuccessCount.value++;
+        counter.increment();
       }
     };
     const startGame = () => {
@@ -44,19 +42,14 @@ export default {
 
       return mojiList[num];
     };
-    const counter = userCounter();
-    const increment = () => {
-      counter.increment();
-    };
     return {
       counter,
-      increment,
       randMoji,
       MojiMoji,
       startGame,
       CheckResult,
       inputValue,
-      SuccessCount,
+      counter,
     };
   },
 };
