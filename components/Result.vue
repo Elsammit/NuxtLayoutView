@@ -1,7 +1,7 @@
 <template>
-  {{ counter.count }}
+  {{ counter.count.value }}
   <br />
-  {{ counte.goodMessage }}
+  {{ counter.goodMessage.value }}
 </template>
 
 <script>
@@ -11,24 +11,6 @@ export default {
   },
   setup(props, context) {
     const counter = userCounter();
-    // const SuccessCount = computed({
-    //   get: () => {
-    //     goodMessage.value = 'good!!!';
-    //     console.log(goodMessage.value);
-    //     setTimeout(() => {
-    //       goodMessage.value = '';
-    //     }, 500);
-    //     return props.modelValue;
-    //   },
-    //   set: (value) => {
-    //     context.emit('update:modelValue', value);
-    //     // goodMessage.value = 'good!!!';
-    //     // console.log(goodMessage.value);
-    //     // setTimeout(() => {
-    //     //   goodMessage.value = '';
-    //     // }, 500);
-    //   },
-    // });
     return { counter };
   },
 };

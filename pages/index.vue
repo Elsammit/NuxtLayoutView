@@ -1,10 +1,14 @@
 <template>
   <div>
-    <h1>index page</h1>
-    {{ MojiMoji }}
+    <h1>タイピングゲーム</h1>
+    <div class="questionString">
+      <p>
+        {{ MojiMoji }}
+      </p>
+      <ChildComponent1 v-model="inputValue" @CheckResult="CheckResult" />
+    </div>
     <TimerComponent @child-clicked="startGame" />
     <br />
-    <ChildComponent1 v-model="inputValue" @CheckResult="CheckResult" />
     <br />
     <Result />
   </div>
@@ -54,3 +58,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.questionString {
+  font-size: 32px;
+  text-align: center;
+}
+</style>

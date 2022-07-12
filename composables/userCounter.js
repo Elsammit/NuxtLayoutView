@@ -1,8 +1,8 @@
 import { ref, readonly } from 'vue';
 const count = ref(0);
+const goodMessage = ref('aaa');
 
 export default () => {
-  const goodMessage = ref('aaa');
   const increment = () => {
     count.value++;
     goodMessage.value = 'good!!!';
