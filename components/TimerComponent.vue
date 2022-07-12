@@ -15,7 +15,9 @@ export default {
         timer.value -= 1;
         if (timer.value <= 0) {
           clearInterval(timerInterval);
+          timer.value = 0;
           alert('finish');
+          timer.value = 10;
         }
       }, 1000);
     };
