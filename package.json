@@ -3,10 +3,14 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "dev2": "nuxt",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.4"
+  },
+  "dependencies": {
+    "vue-fake-input": "^1.1.0"
   }
 }
