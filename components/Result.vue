@@ -1,7 +1,8 @@
 <template>
   {{ counter.count.value }}
   <br />
-  {{ counter.goodMessage.value }}
+  <!-- {{ counter.goodMessage.value }} -->
+  <img src="~/assets/images.jpg" v-show="counter.goodFlg.value" />
 </template>
 
 <script>
