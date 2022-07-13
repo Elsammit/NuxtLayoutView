@@ -1,7 +1,7 @@
 import { ref, readonly } from 'vue';
 const count = ref(0);
 const goodMessage = ref('aaa');
-const goodFlg = ref(false);
+const goodFlg = ref(true);
 
 export default () => {
   const increment = () => {
