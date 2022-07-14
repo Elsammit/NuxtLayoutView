@@ -11,6 +11,16 @@
     <br />
     <br />
     <Result />
+    <!-- ここからレイアウト作成です -->
+    <NuxtLink to="/about">about</NuxtLink>
+    <div class="bodysall">
+      <div class="Content">
+        <p>Webサイトコンテンツ</p>
+      </div>
+        <div class="NavigationMenu">
+          <p>ナビゲーション</p>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -63,5 +73,23 @@ export default {
 .questionString {
   font-size: 32px;
   text-align: center;
+}
+
+.bodysall{
+    display: flex;
+    min-height: 100vh;  
+}
+
+.NavigationMenu{
+    width: 300px;
+    text-align: center;
+    background-color: #1e90ff;
+    color: #fff;
+}
+.Content{
+   flex: 1;
+   background-color: #90ee90;
+   text-align: center;
+   margin-left: 15px;
 }
 </style>

@@ -28,7 +28,6 @@ export default {
 
 <style>
 .startGameBtn {
-  float: left;
   border-radius: 5px;
   width: 100px;
   height: 50px;
