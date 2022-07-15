@@ -4,13 +4,6 @@
   <div>
     <input type="text" class="inputArea" v-model="inputValue" />
     <p>test</p>
-    <vue-fake-input
-        :length="5"
-        :fontSize="40"
-        inputColor="#31bce6"
-        fontColor="#ffc107"
-        :allowPaste="false"
-      />
       
   </div>
 </template>
