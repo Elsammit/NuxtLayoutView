@@ -3,39 +3,14 @@
   <table>
     <tbody>
       <tr>
-        <!-- 上下分割 -->
         <td class="Column">
-          <div class="NavigationMenu1">
-            上部
-          </div>
-          <div class="Content1">
-            下部
-          </div>
+          <LayoutPattern1 />  <!-- 上下分割 -->
         </td>
-        <!-- 左右分割 -->
         <td class="Column">
-          <div class="field">
-            <div class="NavigationMenu2">
-              左部
-            </div>
-            <div class="Content2">
-              右部
-            </div>
-          </div>
+          <LayoutPattern2 />  <!-- 左右分割 -->
         </td>
-        <!-- 3分割 下2分割 -->
         <td class="Column">
-          <div class="UpperArea3">
-            上段
-            </div>
-            <div class="field">
-              <div class="LeftArea3">
-                左側
-              </div>
-              <div class="RightArea3">
-                右側
-              </div>
-          </div>
+          <LayoutPattern3 />  <!-- 3分割 下2分割 -->
         </td>
       </tr>
       <tr>
@@ -212,18 +187,60 @@
       </tr>
       <tr>
         <td class="Column">
-
+          <div class="field">
+            <div class="LeftArea16">
+              <div class="CenterLeft16">左側</div>
+              <div class="UnderArea16"></div>
+            </div>
+            <div class="CenterRight16">
+              <div class="UpperArea16">上段</div>
+              <div class="field">
+                <div class="Center16">
+                  <div class="CenterArea16">中央</div>
+                  <div class="UnderArea16">下段</div>
+                </div>
+                <div class="RightArea16">右側</div>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td class="Column">
+          <div class="field">
+            <div class="LeftArea17">左側</div>
+            <div class="Upper17">
+              <div class="UpperArea17">上段</div>
+              <div class="Center17">
+                <div class="field">
+                  <div class="CenterArea17">中央</div>
+                  <div class="RightArea17">右側</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="UnderArea17">下段</div>
+        </td>
+        <td class="Column">
+          <div class="field">
+            <div class="Left18">
+              <div class="UpperArea18">上段</div>
+              <div class="Center18">
+                <div class="field">
+                  <div class="LeftArea18">左側</div>
+                  <div class="CenterArea18">中央</div>
+                </div>
+              </div>
+              <div class="UnderArea18">下段</div>
+            </div>
+            <div class="RightArea18">右側</div>
+          </div>
         </td>
       </tr>
     </tbody>
   </table>
-  <div class="bodyArea2">
-
-  </div>
 </template>
 
 <style>
-
+/* #region Common */
 :root{
   --td-text-align:center;
   --area1-background-color:#1e90ff;
@@ -242,44 +259,15 @@ td{
   height:300px;
 }
 
-.bodyArea2{
-  min-height: 100vh;
-  width:500px;
-}
-
-.NavigationMenu1{
-  height: 90px;
-  text-align: var(--td-text-align);
-  background-color: var(--area1-background-color);
-  color: #fff;
-}
-.Content1{
-  background-color: var(--area2-background-color);
-  text-align: var(--td-text-align);
-}
-
 .field{
   display: flex;
 }
 
-.NavigationMenu2{
-  height: 100px;
-  width:50px;
-  text-align: var(--td-text-align);
-  background-color: var(--area1-background-color);
-  color: #fff;
-}
-.Content2{
-  flex:1;
-  background-color: var(--area2-background-color);
-  text-align: var(--td-text-align);
-  height: 100px;
-  width:100px;
-}
+/* #endregion */
 
 /* #region Area3 */
 
-.UpperArea3{
+/* .UpperArea3{
   height:90px;
   text-align: var(--td-text-align);
   background-color: var(--area1-background-color);
@@ -296,10 +284,9 @@ td{
 
 .LeftArea3{
   margin-right:20px;
-}
+} */
 
 /* #endregion */
-
 /* #region Area4 */
 
 .LeftArea4, .CenterArea4, .RightArea4{
@@ -315,7 +302,6 @@ td{
 }
 
 /* #endregion */
-
 /* #region Area5 */
 
 .UpperArea5, .CenterArea5, .UnderArea5{
@@ -330,7 +316,6 @@ td{
   margin-bottom: 10px;;
 }
 /* #endregion */
-
 /* #region Area6 */
 
 .RightArea6, .LeftArea6{
@@ -352,7 +337,6 @@ td{
   color:#FFF;
 }
 /* #endregion */
-
 /* #region Area7 */
 
 .UpperArea7{
@@ -382,7 +366,6 @@ td{
   margin-top: 10px;
 }
 /* #endregion */
-
 /* #region Area8 */
 
 .UpperArea8{
@@ -406,7 +389,6 @@ td{
 }
 
 /* #endregion */
-
 /* #region Area9 */
 
 .LeftArea9, .CenterArea9, .RightArea9{
@@ -430,7 +412,6 @@ td{
 }
 
 /* #endregion */
-
 /* #region Area10 */
 .LeftArea10{
   flex:1.5;
@@ -470,7 +451,6 @@ td{
 }
 
 /* #endregion */
-
 /* #region Area11 */
 .LeftArea11{
   flex:.5;
@@ -509,7 +489,6 @@ td{
   margin-left: 10px;
 }
 /* #endregion */
-
 /* #region Area12 */
 .UpperArea12{
   height:60px;
@@ -549,7 +528,6 @@ td{
 }
 
 /* #endregion */
-
 /* #region Area13 */
 .UpperArea13{
   height:60px;
@@ -590,7 +568,6 @@ td{
 }
 
 /* #endregion */
-
 /* #region Area14 */
 .UpperArea14{
   height:60px;
@@ -626,7 +603,6 @@ td{
 }
 
 /* #endregion */
-
 /* #region Area15 */
 .UpperArea15{
   height:60px;
@@ -676,5 +652,168 @@ td{
 }
 
 /* #endregion */
+/* #region Area16 */
 
+.LeftArea16{
+  flex:.5;
+}
+
+.CenterLeft16{
+  flex:.5;
+  height:200px;
+  text-align: var(--td-text-align);
+  background-color: var(--area4-background-color);
+  color:#FFF;
+}
+
+.CenterRight16{
+  flex:1.5;
+}
+
+.UpperArea16{
+  flex:1.5 ;
+  height:60px;
+  text-align: var(--td-text-align);
+  background-color: var(--area1-background-color);
+  color:#FFF;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.Center16{
+  flex:1.5;
+}
+
+.CenterArea16{
+  flex:1.5;
+  text-align: var(--td-text-align);
+  background-color: var(--area2-background-color);
+  height:130px;
+  margin-left: 10px;
+}
+
+.UnderArea16{
+  height:60px;
+  text-align: var(--td-text-align);
+  background-color: var(--area3-background-color);
+  color:#FFF;
+  margin-top: 10px;
+  flex:1.5;
+}
+
+.RightArea16{
+  flex:.5;
+  background-color: var(--area4-background-color);
+  text-align: var(--td-text-align);
+  height: 200px;
+  width:30px;
+  color:#FFF;
+  margin-left:10px;
+}
+/* #endregion */
+/* #region Area17 */
+.LeftArea17{
+  flex:.5;
+  height:200px;
+  text-align: var(--td-text-align);
+  background-color: var(--area4-background-color);
+  color:#FFF;
+  margin-right: 10px;
+}
+
+.Upper17, .Center17{
+  flex:1.5;
+}
+
+.UpperArea17{
+  height:60px;
+  text-align: var(--td-text-align);
+  background-color: var(--area1-background-color);
+  color:#FFF;
+  margin-bottom: 10px;
+  flex:1.5;
+}
+
+.CenterArea17{
+  flex:1.5;
+  background-color: var(--area2-background-color);
+  text-align: var(--td-text-align);
+  height: 130px;
+  width:30px;
+}
+
+.RightArea17{
+  flex:.5;
+  background-color: var(--area4-background-color);
+  text-align: var(--td-text-align);
+  height: 130px;
+  width:30px;
+  color:#FFF;
+  margin-left: 10px;
+}
+
+.UnderArea17{
+  height:60px;
+  text-align: var(--td-text-align);
+  background-color: var(--area3-background-color);
+  color:#FFF;
+  margin-top: 10px;
+  flex:1.5;
+}
+/* #endregion */
+/* #region Area18 */
+.Left18{
+  flex:1.5;
+}
+
+.UpperArea18{
+  height:60px;
+  text-align: var(--td-text-align);
+  background-color: var(--area1-background-color);
+  color:#FFF;
+  margin-bottom: 10px;
+  flex:1.5;
+}
+
+.Center18{
+  flex:1.5px;
+}
+
+.LeftArea18{
+  flex:.5;
+  height:120px;
+  text-align: var(--td-text-align);
+  background-color: var(--area4-background-color);
+  color:#FFF;
+  margin-right: 10px;
+}
+
+.CenterArea18{
+  flex:1.5;
+  background-color: var(--area2-background-color);
+  text-align: var(--td-text-align);
+  height: 120px;
+  width:30px;  
+}
+
+.UnderArea18{
+  height:60px;
+  text-align: var(--td-text-align);
+  background-color: var(--area3-background-color);
+  color:#FFF;
+  margin-top: 10px;
+  flex:1.5;
+}
+
+.RightArea18{
+  flex:.5;
+  background-color: var(--area4-background-color);
+  text-align: var(--td-text-align);
+  height: 260px;
+  width:30px;
+  color:#FFF;
+  margin-left: 10px;  
+}
+
+/* #endregion */
 </style>
