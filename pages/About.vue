@@ -71,7 +71,7 @@
         </tr>
       </tbody>
     </table>
-    <div class="SrcViewerArea">{{readComponent()}}</div>
+    <div class="SrcViewerArea">{{buffer}}</div>
   </div>
 </template>
 
@@ -79,14 +79,30 @@
 import { LayoutPattern1 } from '~~/.nuxt/components';
 
 export default{
-  setup(props, context) {
+  async setup(props, context) {
     const textArea = ref(LayoutPattern1["__file"]);
     const readComponent = () =>{
       const fileReaderObj = fileReader();
-      console.log(LayoutPattern1);
-      return fileReaderObj.FileRead(LayoutPattern1["__file"]);
+      const readfile = fileReaderObj.FileRead(LayoutPattern1["__file"]);
+      console.log(readfile);
+      return readfile;
     }
-    return {textArea, readComponent};
+     const FileRead = async function(){
+        await fetch("/components/LayoutPattern1.vue",{
+            "Content-Type": "plain/text",
+        }).then(response => response.text())
+        .then(data =>{
+            console.log(data);
+            return data.toString();
+        });
+    };
+
+    const buffer = FileRead().then(data =>{
+      console.log(`buffer is ${data}`);
+    });
+    
+    
+    return {textArea, readComponent, FileRead, buffer};
   },
 };
 </script>
