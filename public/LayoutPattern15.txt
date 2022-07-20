@@ -1,0 +1,62 @@
+<template>
+    <div class="UpperArea15">上段</div>
+    <div class="field">
+        <div class="LeftArea15">
+            <div class="field">
+            <div class="CenterLeft15">左側</div>
+            <div class="CenterArea15">中央</div>
+            </div>
+            <div class="UnderArea15">下段</div>
+        </div>
+        <div class="RightArea15">右側</div>
+    </div>
+</template>
+
+<style>
+.UpperArea15{
+  height:60px;
+  text-align: var(--td-text-align);
+  background-color: var(--area1-background-color);
+  color:#FFF;
+  margin-bottom: 10px;
+}
+
+.RightArea15{
+  flex:.5;
+  background-color: var(--area4-background-color);
+  text-align: var(--td-text-align);
+  height: 200px;
+  width:30px;
+  color:#FFF;
+  margin-left:10px;
+}
+
+.LeftArea15{
+  flex:1.5;
+}
+
+.UnderArea15{
+  flex:1.5;
+  height:60px;
+  text-align: var(--td-text-align);
+  background-color: var(--area3-background-color);
+  color:#FFF;
+  margin-top: 10px;
+}
+
+.CenterArea15{
+  flex:1.5;
+  text-align: var(--td-text-align);
+  background-color: var(--area2-background-color);
+  height:130px;
+  margin-left: 10px;
+}
+
+.CenterLeft15{
+  flex:.5;
+  height:130px;
+  text-align: var(--td-text-align);
+  background-color: var(--area4-background-color);
+  color:#FFF;
+}
+</style>

@@ -1,0 +1,49 @@
+<template>
+    <div class="field">
+        <div class="LeftArea11">左側</div>
+        <div class="RightArea11">
+            <div class="UpperArea11">右上段</div>
+            <div class="CenterArea11">右中央</div>
+            <div class="UnderArea11">右下段</div>
+        </div>
+    </div>
+</template>
+
+<style>
+.LeftArea11{
+  flex:.5;
+  background-color: var(--area4-background-color);
+  text-align: var(--td-text-align);
+  height: 260px;
+  width:30px;
+  color:#FFF;
+}
+
+.RightArea11{
+  flex:1.5;
+}
+
+.UpperArea11{
+  text-align: var(--td-text-align);
+  background-color: var(--area1-background-color);
+  color:#FFF;
+  margin-bottom: 10px;
+}
+
+.CenterArea11{
+  text-align: var(--td-text-align);
+  background-color: var(--area2-background-color);
+  margin-bottom: 10px;
+}
+
+.UnderArea11{
+  text-align: var(--td-text-align);
+  background-color: var(--area3-background-color);
+  color:#FFF;
+}
+
+.UpperArea11, .CenterArea11, .UnderArea11{
+  height:80px;
+  margin-left: 10px;
+}
+</style>
