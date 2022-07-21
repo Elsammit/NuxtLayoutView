@@ -6,14 +6,13 @@
 
 <style>
 .UpperArea5, .CenterArea5, .UnderArea5{
-  flex:1;
   background-color: var(--area2-background-color);
   text-align: var(--td-text-align);
   height: 80px;
-  width:300px;
+  width:290px;
 }
 
 .UpperArea5, .CenterArea5{
-  margin-bottom: 10px;;
+  margin-bottom: 10px;
 }
 </style>
