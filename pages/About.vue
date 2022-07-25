@@ -131,6 +131,18 @@
               <LayoutPattern19 />
             </button>
           </td>
+          <td class="Column"
+            v-bind:class="{'selectedBorder':selectedID==='LayoutPattern20'}">
+            <button class="ButtonStyle" @click="viewCode('LayoutPattern20')">
+              <LayoutPattern20 />
+            </button>            
+          </td>
+          <td class="Column"
+            v-bind:class="{'selectedBorder':selectedID==='LayoutPattern21'}">
+            <button class="ButtonStyle" @click="viewCode('LayoutPattern21')">
+              <LayoutPattern21 />
+            </button>            
+          </td>
         </tr>
       </tbody>
     </table>
@@ -217,6 +229,10 @@ td{
 
 .field{
   display: flex;
+}
+
+.convolution{
+    position: relative;
 }
 
 /* #endregion */

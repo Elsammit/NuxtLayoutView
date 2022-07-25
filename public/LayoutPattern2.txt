@@ -15,6 +15,7 @@
 }
 .Content2{
   flex:1;
+  margin-left:10px;
   background-color: var(--area2-background-color);
   text-align: var(--td-text-align);
   height: 100px;
