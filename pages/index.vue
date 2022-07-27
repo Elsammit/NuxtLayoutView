@@ -13,6 +13,7 @@
     <Result />
     <!-- ここからレイアウト作成です -->
     <NuxtLink to="/about">about</NuxtLink>
+    <NuxtLink to="/Animation">about</NuxtLink>
     <div class="bodysall">
       <div class="Content">
         <p>Webサイトコンテンツ</p>
@@ -20,6 +21,18 @@
         <div class="NavigationMenu">
           <p>ナビゲーション</p>
         </div>
+    </div>
+        <nav>
+        <ul>
+            <li><a href="#first">first</a></li>
+            <li><a href="#second">second</a></li>
+            <li><a href="#third">third</a></li>
+        </ul>
+    </nav>
+    <div class="scroll-smooth h-screen w-screen">
+        <div id="first" class="h-screen w-screen">1</div>
+        <div id="second" class="h-screen w-screen">2</div>
+        <div id="third" class="h-screen w-screen">3</div>
     </div>
   </div>
 </template>
