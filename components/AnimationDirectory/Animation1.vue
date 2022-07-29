@@ -1,21 +1,16 @@
 <template>
-    <div class="loading1">
+    <div class="BaseLocation">
         <div class="spinner1"></div>
     </div>
 </template>
 
 <style>
-.loading1{
-    width:300px;
-    height: 300px;
-    transition:all 1s;
-    background-color: #0bd;
-}
-
 .spinner1{
+    position: relative;
     width: 100px;
     height: 100px;
-    margin:200px auto;
+    top:100px;
+    left:100px;
     background-color: #fff;
     border-radius: 100%;
     animation: sk-scaleout 1.0s infinite ease-in-out;
