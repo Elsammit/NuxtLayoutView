@@ -19,7 +19,9 @@
     }
 
     .ProgressBar .bar{
-        height:50px;
+        position: relative;
+        top:-20px;
+        height:80px;
         background-color: #FFCA28;
         animation: progress 4s normal infinite;
         animation-fill-mode:forwards;
