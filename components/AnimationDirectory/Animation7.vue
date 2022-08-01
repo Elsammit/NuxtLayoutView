@@ -12,25 +12,24 @@
 
 <script>
     export default{
-        setup(){
-            const y = ref(100);
-            const x = ref(10);
-            // const revert = ref(false);
-            // window.onload = function () {
-            //     window.setInterval(function(){
-            //         if(x.value <= 20 && revert.value){
-            //             revert.value = false;
-            //         }else if(x.value > 230 && !revert.value){
-            //             revert.value = true;
-            //         }
-            //         if(!revert.value){
-            //             x.value+= 10;
-            //         }else{
-            //             x.value -= 10;
-            //         }
-            //         y.value = 80/x.value; 
-            //     },50);
-            // }
+        props:{
+            modelValue:Number,
+        },
+        setup(props, context){
+            const y = ref(0);
+            const x = computed({
+                get: ()=> {
+                        if(props.modelValue == 0){
+                            y.value = 0;
+                        }else{
+                            y.value = 5000/props.modelValue;
+                        }
+                        return props.modelValue
+                    },
+                set:(value) => {
+                    context.emit("update:modelValue",value);
+                }
+            });
 
             return {x, y};
         }

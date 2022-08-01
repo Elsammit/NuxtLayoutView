@@ -21,7 +21,7 @@
             const y = ref(0);
             const x = computed({
                 get: ()=> {
-                        y.value = props.modelValue;
+                        y.value = ((props.modelValue - 130)**2)/80;
                         return props.modelValue
                     },
                 set:(value) => {
