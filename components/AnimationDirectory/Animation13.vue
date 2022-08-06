@@ -13,8 +13,14 @@
     export default{
         setup(){
             const obj = ref("");
+            const flg = ref(false);
             const test = () =>{
-                obj.value = "circle-move-anim 4s linear infinite";
+                if(!flg.value){
+                    obj.value = "circle-move-anim 4s linear infinite";
+                }else{
+                    obj.value = "";
+                }
+                flg.value = !flg.value;
             }
 
             return {test, obj};

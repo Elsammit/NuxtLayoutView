@@ -13,7 +13,8 @@
     <Result />
     <!-- ここからレイアウト作成です -->
     <NuxtLink to="/about">about</NuxtLink>
-    <NuxtLink to="/Animation">about</NuxtLink>
+    <NuxtLink to="/Animation">Animation</NuxtLink>
+    <NuxtLink to="/Markdown">Markdown</NuxtLink>
     <div class="bodysall">
       <div class="Content">
         <p>Webサイトコンテンツ</p>

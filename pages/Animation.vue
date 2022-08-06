@@ -37,6 +37,22 @@
                             <Animation9 />
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <Animation10 />
+                        </td>
+                        <td>
+                            <Animation11 />
+                        </td>
+                        <td>
+                            <Animation12 />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <Animation13 />
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
