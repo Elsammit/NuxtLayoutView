@@ -15,6 +15,7 @@
     <NuxtLink to="/about">about</NuxtLink>
     <NuxtLink to="/Animation">Animation</NuxtLink>
     <NuxtLink to="/Markdown">Markdown</NuxtLink>
+    <NuxtLink to="/MakeQRCode">MakeQRCode</NuxtLink>
     <div class="bodysall">
       <div class="Content">
         <p>Webサイトコンテンツ</p>

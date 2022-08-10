@@ -2,19 +2,21 @@
 <div class = "AllArea">
     <input class="InputArea" v-model="inputMsg" />
     <div class="MarkdownArea">
-        {{inputMsg}}
+        <article v-html="markdownText"></article>
     </div>
 </div>
 </template>
 
 <script>
+    import {marked} from "marked"
+
     export default{
         setup(){
-            const changeMarkdownObj = changeMarkdown();
+            const inputMsg = ref("Inputhere.");
+            const markdownText = computed(() => 
+                marked.parse(inputMsg.value)
+            );
 
-            const inputMsg = ref("#Input here.");
-            const markdownText = changeMarkdownObj.ChgToMarkdown(inputMsg.value);
-            
             return {inputMsg, markdownText};
         }
     };
