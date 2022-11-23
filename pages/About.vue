@@ -176,10 +176,12 @@ export default{
                 "Content-Type": "text/html",
             }).then(response => response.text())
                 .then(data => {
-                console.log(data.toString());
-                buffer.value = data.toString();
-                return data.toString();
-            });
+                  console.log("================");
+                  console.log(data.toString());
+                  console.log("================");
+                  buffer.value = data.toString();
+                  return data.toString();
+                });
             selectedID.value = LayoutNum;
         };
         async function viewCode(LayoutNum) {
@@ -203,6 +205,16 @@ export default{
   --src-area-background-color:#1e1eff;
 }
 
+.field{
+  display: flex;
+}
+
+.convolution{
+    position: relative;
+}
+
+/* #endregion */
+
 td{
   border:1px solid #333;
   padding:10px;
@@ -224,16 +236,6 @@ td{
 .ButtonStyle:hover{
   background-color: #505050;
 }
-
-.field{
-  display: flex;
-}
-
-.convolution{
-    position: relative;
-}
-
-/* #endregion */
 
 /* #tegion SrcViewerArea */
 .SrcViewerArea{

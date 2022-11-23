@@ -8,6 +8,10 @@ export default defineNuxtConfig({
             mode: 'client'
           }
     ],
+    serverMiddleware:[{
+        path:"/api",
+        handler:"~/express1/api.js"
+    }]
 })
 
 

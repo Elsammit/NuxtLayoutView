@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>タイピングゲーム</h1>
+    hhh
     <TimerComponent @child-clicked="startGame" />
     <div class="questionString">
       <p>
