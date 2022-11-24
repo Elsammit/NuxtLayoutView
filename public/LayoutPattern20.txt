@@ -8,38 +8,49 @@
 </template>
 
 <style>
+:root{
+  --td-text-align:center;
+  --area1-background-color:#1e90ff;
+  --area2-background-color:#90ee90;
+  --area3-background-color:#ff1e90;
+  --area4-background-color:#909090;
+  --src-area-background-color:#1e1eff;
+}
 
+.convolution{
+    position: relative;
+}
 
-    .BaseBox20{
-        margin:15px;
-        height:260px;
-        width:260px;
-        text-align: var(--td-text-align);
-        background-color: var(--area1-background-color);
-        color:#FFF;
-    }
+.BaseBox20{
+    margin:15px;
+    height:260px;
+    width:260px;
+    text-align: var(--td-text-align);
+    background-color: var(--area1-background-color);
+    color:#FFF;
+}
 
-    .UponLeft20, .UponCenter20, .UponRihgt20{
-        text-align: var(--td-text-align);
-        background-color: var(--area2-background-color);
-        text-align: center;
-        vertical-align: middle;
-        position: absolute;
-        width: 60px;
-        height:50px;
-        bottom:30px;
-    }
+.UponLeft20, .UponCenter20, .UponRihgt20{
+    text-align: var(--td-text-align);
+    background-color: var(--area2-background-color);
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    width: 60px;
+    height:50px;
+    bottom:30px;
+}
 
-    .UponLeft20{
-        left:40px;
-    }
+.UponLeft20{
+    left:40px;
+}
 
-    .UponCenter20{
-        left:120px;
-    }
+.UponCenter20{
+    left:120px;
+}
 
-    .UponRihgt20{
-        left:200px;
-    }
+.UponRihgt20{
+    left:200px;
+}
 
 </style>

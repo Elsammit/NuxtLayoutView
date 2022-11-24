@@ -7,6 +7,19 @@
     <div class="UnderArea9">下段</div>
 </template>
 <style>
+:root{
+  --td-text-align:center;
+  --area1-background-color:#1e90ff;
+  --area2-background-color:#90ee90;
+  --area3-background-color:#ff1e90;
+  --area4-background-color:#909090;
+  --src-area-background-color:#1e1eff;
+}
+
+.field{
+  display: flex;
+}
+
 .LeftArea9, .CenterArea9, .RightArea9{
   flex:1;
   background-color: var(--area2-background-color);
