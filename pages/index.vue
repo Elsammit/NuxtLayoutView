@@ -148,12 +148,9 @@
         </tbody>
       </table>
       <div class="SrcViewerArea">
-        <p>サンプルプログラム</p>
+        <u>サンプルプログラム</u>
+        <button class="codeCopy" @click="copy">Copy!</button>
         <div>
-          <!-- <div class="field">
-            <button>文字コピー</button>
-            <button>ダウンロード</button>
-          </div> -->
           {{buffer}}
         </div>
       </div>
@@ -164,6 +161,7 @@
 <script>
 import { LayoutPattern1 } from '~~/.nuxt/components';
 import TestPattern from '~~/components/testFolder/testPattern.vue';
+import useClipboard from 'vue-clipboard3'
 
 export default{
     async setup(props, context) {
@@ -190,7 +188,17 @@ export default{
             await FileRead(LayoutNum);
         }
         const buffer = ref(" ");
-        return { textArea, readComponent, FileRead, buffer, viewCode, selectedID };
+
+        const { toClipboard } = useClipboard();
+        const copy = async () => {
+          try {
+            await toClipboard(buffer.value);
+            alert("Copied !!");
+          } catch (e) {
+            console.error(e)
+          }
+        }        
+        return { textArea, readComponent, FileRead, buffer, viewCode, selectedID, copy };
     },
     components: { TestPattern }
 };
@@ -248,9 +256,10 @@ td{
   width: 500px;
 }
 
-.SrcViewerArea > p{
+.SrcViewerArea > u{
   font-weight: bold;
   font-size: 20px;
+  margin: 20px;
 }
 
 .SrcViewerArea > div{
@@ -274,4 +283,22 @@ td{
   background-color: wheat;
   border:2px solid red;
 }
+
+.codeCopy {
+	text-align: center;
+	width: 100px;
+	margin: auto;
+  margin-bottom: 20px;
+	padding: 1rem 1rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	color: #27acd9;
+	transition: 0.5s;
+}
+.codeCopy:hover {
+	color: #fff;
+	background: #27acd9;
+  cursor : pointer;
+}
+
 </style>
