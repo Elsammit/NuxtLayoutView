@@ -160,7 +160,6 @@
 
 <script>
 import { LayoutPattern1 } from '~~/.nuxt/components';
-import TestPattern from '~~/components/testFolder/testPattern.vue';
 import useClipboard from 'vue-clipboard3'
 
 export default{
@@ -200,7 +199,6 @@ export default{
         }        
         return { textArea, readComponent, FileRead, buffer, viewCode, selectedID, copy };
     },
-    components: { TestPattern }
 };
 </script>
 
