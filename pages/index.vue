@@ -158,8 +158,9 @@
 </template>
 
 <script>
-import { LayoutPattern1 } from '~~/.nuxt/components';
+// import { LayoutPattern1 } from '~~/.nuxt/components';
 import useClipboard from 'vue-clipboard3'
+import LayoutPattern1 from '~/components/LayoutDirectory'
 
 export default{
     async setup(props, context) {
@@ -297,5 +298,16 @@ td{
 	background: #27acd9;
   cursor : pointer;
 }
-
+.NavigationMenu1{
+    height: 50px;
+    text-align: var(--td-text-align);
+    background-color: var(--area1-background-color);
+    color: #fff;
+    margin-bottom: 10px;
+}
+.Content1{
+    background-color: var(--area2-background-color);
+    text-align: var(--td-text-align);
+    height: 120px;
+}
 </style>
