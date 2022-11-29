@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         handler:"~/express1/api.js"
     }],
     app:{
-        cdnURL:'/NuxtLayoutView/'
+        baseURL:'/NuxtLayoutView/'
     }
 })
 
