@@ -12,6 +12,9 @@ export default defineNuxtConfig({
         path:"/api",
         handler:"~/express1/api.js"
     }],
+    app:{
+        baseURL:'/NuxtLayoutView'
+    }
 })
 
 
