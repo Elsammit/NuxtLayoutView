@@ -158,20 +158,19 @@
 </template>
 
 <script>
-// import { LayoutPattern1 } from '~~/.nuxt/components';
+import { LayoutPattern1 } from '~~/.nuxt/components';
 import useClipboard from 'vue-clipboard3'
-import LayoutPattern1 from '~/components/LayoutDirectory'
 
 export default{
     async setup(props, context) {
-        const textArea = ref(LayoutPattern1["__file"]);
+        // const textArea = ref(LayoutPattern1["__file"]);
         const selectedID = ref("");
-        const readComponent = () => {
-            const fileReaderObj = fileReader();
-            const readfile = fileReaderObj.FileRead(LayoutPattern1["__file"]);
-            console.log(readfile);
-            return readfile;
-        };
+        // const readComponent = () => {
+        //     const fileReaderObj = fileReader();
+        //     const readfile = fileReaderObj.FileRead(LayoutPattern1["__file"]);
+        //     console.log(readfile);
+        //     return readfile;
+        // };
         const FileRead = async function (LayoutNum) {
             const LayoutPath = `/${LayoutNum}.txt`;
             await fetch(LayoutPath, {
@@ -197,7 +196,7 @@ export default{
             console.error(e)
           }
         }        
-        return { textArea, readComponent, FileRead, buffer, viewCode, selectedID, copy };
+        return { FileRead, buffer, viewCode, selectedID, copy };
     },
 };
 </script>
