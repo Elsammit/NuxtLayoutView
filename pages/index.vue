@@ -8,8 +8,7 @@
             <td class="Column" 
               v-bind:class="{'selectedBorder':selectedID==='LayoutPattern1'}">
                 <button class="ButtonStyle" @click="viewCode('LayoutPattern1')">
-                  <LayoutPattern1 
-                    />  <!-- 上下分割 -->
+                  <LayoutPattern1  />  <!-- 上下分割 -->
                 </button>
             </td>
             <td class="Column"
