@@ -8,12 +8,13 @@ export const useMyFetch = (request, opts) => {
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+    target:'static',
     serverMiddleware:[{
         path:"/api",
         handler:"~/express1/api.js"
     }],
-    app:{
-        baseURL:'/NuxtLayoutView/'
+    router:{
+        base:'/NuxtLayoutView/'
     }
 })
 
