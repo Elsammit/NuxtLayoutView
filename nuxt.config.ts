@@ -12,10 +12,8 @@ export default defineNuxtConfig({
         path:"/api",
         handler:"~/express1/api.js"
     }],
-    runtimeConfig:{
-        public:{
-            baseURL: process.env.BASE_URL || 'https://elsammit.github.io/NuxtLayoutView/'
-        }
+    router:{
+        base:'/NuxtLayoutView/'
     }
 })
 
